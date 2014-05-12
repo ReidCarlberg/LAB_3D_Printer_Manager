@@ -1,0 +1,45 @@
+<apex:page controller="PrinterManagerController" standardStylesheets="false"
+           showHeader="false" sidebar="false" docType="html-5.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"></link>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"></link>
+	<style>
+        body { padding: 5px; }
+        
+        p { padding-top: 5px; }
+        
+        h2 { padding: 5px; }
+	</style>
+	<!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+	<h1>
+        Results
+	</h1>
+
+        <h2 class="bg-primary" >
+			{!selectedPrinter}, 
+            {!selectedCommandLabel} 
+        </h2>    
+	<apex:form >
+        <apex:outputPanel id="showResults">
+            <apex:outputPanel rendered="{!lastResponse == null}">
+                <center>
+                <img src="{!URLFOR($Resource.Working)}" />
+                    </center>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!lastResponse != null}">
+                <apex:outputText escape="false" value="{!lastResponse}" />
+
+                    <p><apex:commandButton styleClass="form-control input-lg" value="New Command {!selectedPrinter}" action="{!newCommand}" /></p>
+                    
+                    <p><apex:commandButton styleClass="form-control input-lg" value="Start Over" action="{!startOver}" /></p>
+
+            </apex:outputPanel>
+
+        </apex:outputPanel>
+		<apex:actionPoller action="{!checkResponse}" reRender="showResults" interval="5"/>
+	</apex:form>
+</apex:page>

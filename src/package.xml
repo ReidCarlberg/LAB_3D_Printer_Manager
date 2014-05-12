@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LAB_3D_Printer_Manager</fullName>
+    <types>
+        <members>PrinterManagerController</members>
+        <members>PrinterManagerControllerTest</members>
+        <members>PrinterResponseService</members>
+        <members>PrinterResponseServiceTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>PrinterCommandManager</members>
+        <members>PrinterCommandResults</members>
+        <members>PrinterManager</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>X3D_Printer_Management</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Printer_Command__c.Body__c</members>
+        <members>Printer_Command__c.Label__c</members>
+        <members>Printer_Command__c.Message__c</members>
+        <members>Printer_Command__c.Render_As__c</members>
+        <members>Printer_Command__c.Sort__c</members>
+        <members>Printer_Message__c.Body__c</members>
+        <members>Printer_Message__c.Message__c</members>
+        <members>Printer_Message__c.Printer_Command__c</members>
+        <members>Printer_Message__c.Printer_Name__c</members>
+        <members>Printer_Message__c.Response__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Printer_Command__c</members>
+        <members>Printer_Message__c</members>
+        <members>Printer__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Printer_Command__c</members>
+        <members>Printer_Manager</members>
+        <members>Printer_Message__c</members>
+        <members>Printer__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Printer_Command__c-Printer Command Layout</members>
+        <members>Printer_Message__c-Printer Message Layout</members>
+        <members>Printer__c-Printer Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Printer_Command__c.All</members>
+        <members>Printer_Message__c.All</members>
+        <members>Printer__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>Working</members>
+        <name>StaticResource</name>
+    </types>
+    <version>25.0</version>
+</Package>

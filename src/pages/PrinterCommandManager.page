@@ -1,0 +1,27 @@
+<apex:page controller="PrinterManagerController" standardStylesheets="false"
+           showHeader="false" sidebar="false" docType="html-5.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"></link>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"></link>
+	<style>
+        body { padding: 5px; }
+	</style>
+	<!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <apex:form >
+    	<h1>
+            Select Command
+        </h1>    
+        <h2 class="bg-primary" style="padding: 5px;">
+			{!selectedPrinter} 
+        </h2>
+        <apex:selectList styleClass="form-control input-lg" value="{!selectedCommand}" multiselect="false" size="1" >
+            <apex:selectOptions value="{!commands}" />
+        </apex:selectList>	
+            <br/>    
+        <apex:commandButton styleClass="form-control input-lg" value="Next" action="{!selectCommand}" />        
+	</apex:form>
+</apex:page>
