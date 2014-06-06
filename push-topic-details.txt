@@ -1,0 +1,7 @@
+Push Topic Details:
+
+Name: Printer1
+
+API Version: 29.0
+
+SOQL: Select Id, Name, Printer_Name__c, Message__c, Body__c from Printer_Message__c Where Printer_Name__c = 'Printer1'
