@@ -1,0 +1,36 @@
+"Label","Message","Render As","Sort","Body","Printer Command: Printer Command Name"
+"Current Temperature","/api/printer/tool","Temp","A","","PC-000005"
+"Print Cube","/api/files/local/FirstCube.gcode","Simple","E","{
+  ""command"": ""select"",
+  ""print"": true
+}","PC-000003"
+"List Files","/api/files","Raw","D","","PC-000004"
+"Heat On (195)","/api/printer/tool","Simple","B","{ 
+""command"": ""target"", 
+""targets"": { 
+""tool0"": 195
+} 
+}","PC-000002"
+"Heat Off","/api/printer/tool","Simple","C","{ 
+""command"": ""target"", 
+""targets"": { 
+""tool0"": 0 
+} 
+}","PC-000001"
+"Pause / Unpause","/api/job","Simple","CC","{
+  ""command"": ""pause""
+}","PC-000020"
+"Job Info","/api/job","Raw","DDD","","PC-000021"
+"Print Dodecahedron","/api/files/local/dice_dodecahedron.gcode","Simple","E","{
+  ""command"": ""select"",
+  ""print"": true
+}","PC-000022"
+"Print Pyramid","/api/files/local/pyramid.gcode","Simple","E","{
+  ""command"": ""select"",
+  ""print"": true
+}","PC-000024"
+"Print Dice","/api/files/local/Dice.gcode","Simple","E","{
+  ""command"": ""select"",
+  ""print"": true
+}","PC-000023"
+
